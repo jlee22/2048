@@ -9,9 +9,4 @@
 
 ## Summary
 
-Let's build a clone of the game [2048](http://gabrielecirulli.github.io/2048/).
-
-
-* Implement a score display.
-* Implement starting a new game.
-* Implement storing the game in LocalStorage so that it still shows up if you close the tab.
+Build a clone of the game [2048](http://gabrielecirulli.github.io/2048/).

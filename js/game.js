@@ -1,13 +1,4 @@
-// var row_1 = [0,0,2,4];
-// var row_2 = [0,0,0,0];
-// var row_3 = [0,0,2,0];
-// var row_4 = [0,0,0,0];
-
-// var board = [row_1, row_2, row_3, row_4];
-
 //chunk function for underscore
-
-
 _.mixin({
   chunk : function (array, unit) {
     if (!_.isArray(array)) return array;
@@ -42,6 +33,7 @@ var add = function(array) {
   for(var i = 0; i < array.length - 1; i++) {
     if (array[i] === array[i + 1]) {
       array[i] = 2 * array[i];
+      update_score(array[i]);
       array[i + 1] = 0;
     };
   };
@@ -132,6 +124,7 @@ var generate_number = function() {
 
 var display_board = function() {
   var flat_board = [].concat.apply([], current_board);
+    $('#score').empty().text(current_score);
   for (var i = 0; i < 16; i++) {
     $('#box_' + i).removeClass('hidden').empty().append(flat_board[i]);
     if(flat_board[i] === 0) {
@@ -140,9 +133,10 @@ var display_board = function() {
   };
 };
 
-var update_score = function () {
-  
+var update_score = function (sum) {
+  current_score += sum
 }
 
 var smushed = true;
 var current_board = gen_board();
+var current_score = 0;
