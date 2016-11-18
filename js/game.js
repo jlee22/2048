@@ -137,6 +137,12 @@ var update_score = function (sum) {
   current_score += sum
 }
 
+var reset_board = function() {
+  current_board = gen_board();
+  current_score = 0;
+  display_board();
+}
+
 var smushed = true;
 var current_board = gen_board();
 var current_score = 0;
