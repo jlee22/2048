@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <!--
+    application.css is where you put your styles
+  -->
+  <!-- <link rel="stylesheet" href="css/application.css"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/mousetrap.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/application.js"></script>
+
+  <title>256!</title>
+</head>
+<body>
+
+<style type="text/css">
+
+body {
+  font-size: 1.5em;
+}
+
+td {
+  width: 80px;
+  height: 80px;
+  border:1px solid gray;
+  padding: 5px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.hidden{
+  color: white;
+}
+
+</style>
+<h1>2048</h1><br>
+<table>
+  <tr>
+    <td id='box_0'></td>
+    <td id='box_1'></td>
+    <td id='box_2'></td>
+    <td id='box_3'></td>
+  </tr>
+
+  <tr>
+    <td id='box_4'></td>
+    <td id='box_5'></td>
+    <td id='box_6'></td>
+    <td id='box_7'></td>
+  </tr>
+
+  <tr>
+    <td id='box_8'></td>
+    <td id='box_9'></td>
+    <td id='box_10'></td>
+    <td id='box_11'></td>
+  </tr>
+
+  <tr>
+    <td id='box_12'></td>
+    <td id='box_13'></td>
+    <td id='box_14'></td>
+    <td id='box_15'></td>
+  </tr>
+</table>
+
+</body>
+</html>
