@@ -20,9 +20,14 @@
 
   <title>2048!</title>
 </head>
+
 <body>
 
 <style type="text/css">
+html {
+  background-color: rgba(235, 228, 193, 1);
+  margin-left: 3%;
+}
 
 body {
   font-size: 1.5em;
@@ -32,7 +37,7 @@ body {
 td {
   width: 80px;
   height: 80px;
-  border:1px solid gray;
+  border:2px solid black;
   padding: 5px;
   text-align: center;
 }
@@ -40,14 +45,22 @@ td {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  background-color: rgba(21, 100, 156, 1);
 }
 
 .hidden{
-  color: white;
+  color: rgba(21, 100, 156, 1);
 }
 
 </style>
-<h1>2048</h1><br>
+
+<h1>2048</h1>
+
+<div class="score-container">
+<div id="score-text">Score:</div>
+<div id="score"></div>
+</div><br>
+
 <table>
   <tr>
     <td id='box_0'></td>
@@ -77,6 +90,6 @@ table {
     <td id='box_15'></td>
   </tr>
 </table>
-
+<button type="button">Reset</button>
 </body>
 </html>
