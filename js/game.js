@@ -140,5 +140,9 @@ var display_board = function() {
   };
 };
 
+var update_score = function () {
+  
+}
+
 var smushed = true;
 var current_board = gen_board();
