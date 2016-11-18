@@ -13,6 +13,11 @@ _.mixin({
   }
 });
 
+// sample function for arrays
+Array.prototype.sample = function() {
+  return this[~~(Math.random() * this.length)];
+}
+
 var gen_board = function() {
   var zero_board = Array(14).fill(0);
   zero_board.push(2, 2);
@@ -112,10 +117,14 @@ var generate_number = function() {
     if (flat_board.includes(0)) {
       while (generation) {
         var random_num = Math.floor(Math.random() * 16)
-        if (flat_board[random_num] === 0) {
-          flat_board[random_num] = 2;
-          generation = false;
-        };
+        var gen_num = [2,4].sample();
+          if (flat_board[random_num] === 0 && current_score > 100 ) {
+            flat_board[random_num] = gen_num;
+            generation = false;
+          } else if (flat_board[random_num] === 0) {
+            flat_board[random_num] = 2;
+            generation = false;
+          };
       };
     };
   };
